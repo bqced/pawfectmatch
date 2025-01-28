@@ -1,50 +1,120 @@
-# Welcome to your Expo app 👋
-
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
-## Get started
-
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+App Plan for Pawfect Match
+________________________________________
+1. Welcome/Onboarding Screen
+Purpose: Introduce the app to new users and allow account creation or login.
+Main Features:
+•	App Logo and Tagline: “Find your pet's Pawfect Match!”
+•	Buttons:
+o	Sign Up (via email, Google, Facebook, or Apple ID).
+o	Log In for returning users.
+•	Carousel Showcasing App Features:
+o	Upload pet profiles.
+o	Match with compatible pets nearby.
+o	Set up playdates!
+Flow:
+•	Sign Up → Redirected to the Profile Setup Screen.
+•	Log In → Redirected to the Home Screen.
+________________________________________
+2. Profile Setup Screen
+Purpose: Gather information about the user and their pet(s).
+Main Features:
+•	Owner’s Info: Name, location, and preferences for meeting.
+•	Pet’s Profile:
+o	Name, breed, age, gender.
+o	Photos/videos upload (up to 5).
+o	Personality traits (e.g., playful, shy, energetic).
+o	Interests (e.g., fetch, socializing, hiking).
+Flow:
+•	Once the profile is complete, users are redirected to the Home/Discovery Screen.
+________________________________________
+3. Home/Discovery Screen (Pet Tinder)
+Purpose: The main matchmaking screen where users browse other pet profiles and swipe to like or pass.
+Main Features:
+•	Swipe UI:
+o	Swipe Right (like).
+o	Swipe Left (pass).
+•	Pet Profiles:
+o	Photos/videos and short bio displayed.
+o	Icons for viewing more details or liking a pet.
+•	Filters:
+o	Adjust by distance, pet type, age, and personality traits.
+Flow:
+•	Swipe left/right → Pet profile added to the “Liked” or “Skipped” list.
+•	When both owners swipe right → Redirected to Match Screen.
+________________________________________
+4. Match Screen
+Purpose: Celebrate the match and provide a way for owners to connect.
+Main Features:
+•	Match Celebration Animation (e.g., paw prints and confetti).
+•	Buttons:
+o	Message: Opens a chat with the matched owner.
+o	Set Up a Playdate: Opens the Playdate Planner via the Chat Screen.
+Flow:
+•	Users can start chatting or set up a playdate.
+•	Redirect to Chat Screen or Playdate Planner.
+________________________________________
+5. Chat Screen
+Purpose: Facilitate communication between matched pet owners.
+Main Features:
+•	Messaging:
+o	Text, emojis, and image sharing (e.g., more pet photos).
+•	Playdate Planner Button:
+o	“Plan a Playdate” button prominently displayed.
+Flow:
+•	Users communicate and decide if they want to meet.
+•	Tap the Playdate Planner Button → Redirect to the Playdate Planner.
+________________________________________
+6. Playdate Planner
+Purpose: Organize a meeting between owners and pets.
+Main Features:
+•	Location Input:
+o	Users manually enter an address or venue name (e.g., “Central Park Dog Park”).
+o	Displays location on a map preview.
+•	Date & Time Selector:
+o	Calendar and time picker allow users to choose a convenient time.
+•	Playdate Confirmation:
+o	Sends playdate details as a message in the chat.
+o	Example:
+“Max and Bella’s playdate is set! 🐾
+Location: Central Park Dog Park
+Date: Saturday, Jan 27
+Time: 3:00 PM
+Add to your calendar!”
+•	Add to Calendar Button:
+o	Allows users to save the playdate to their preferred calendar app (Google Calendar, iCal, etc.).
+•	Edit/Cancel Option:
+o	Users can reopen the Playdate Planner to modify or cancel the playdate.
+Flow:
+•	Playdate is planned via the Chat Screen → Confirmation sent as a chat message.
+•	Calendar integration provides reminders.
+________________________________________
+7. Notifications Screen
+Purpose: Keep users informed about matches, messages, and playdate invites.
+Main Features:
+•	Alerts for:
+o	New matches.
+o	Messages.
+o	Playdate reminders.
+•	Clicking a notification redirects users to the relevant screen (e.g., Chat or Playdate Planner).
+________________________________________
+8. Profile and Settings Screen
+Purpose: Allow users to manage their account and pet profiles.
+Main Features:
+•	Edit Pet Profiles:
+o	Update photos, interests, or preferences.
+•	Account Settings:
+o	Update location, email, or password.
+•	Privacy Options:
+o	Block/report users.
+o	Toggle notifications.
+•	Delete Account Button:
+Flow:
+•	Users can navigate back to the Home Screen or other features via a bottom navigation bar.
+________________________________________
+Navigation Flow Summary
+1.	Welcome Screen → Profile Setup → Home Screen.
+2.	Home Screen → Swipe Right → Match Screen.
+3.	Match Screen → Chat or Playdate Planner.
+4.	Chat Screen → Playdate Planner → Playdate Confirmation.
+5.	Playdate Planner → Sends details to the chat and calendar.
+6.	Notifications: Alerts users of key events and reminders.

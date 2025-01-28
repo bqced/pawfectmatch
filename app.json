@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "pawfect-match",
+    "slug": "pawfect-match",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "platforms": ["ios", "android"],
+"ios": {
+      "bundleIdentifier": "com.ios.pawfectmatch",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.android.pawfectmatch",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "927fcf89-0650-44f4-a1eb-74fd2b2f599d"
+      }
+    },
+    "owner": "bqced"
+  }
+}
